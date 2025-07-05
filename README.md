@@ -40,10 +40,18 @@ Use the following details when prompted during login:
 | USER3      | 5678  | ₹6200    |
 | USER4      | 7890  | ₹3450    |
 
-✅ These users are stored in `USERinfo.py`.
+✅ These users are loaded from `accounts.pkl`.  
+If the file is missing, it will be auto-generated using `USERinfo.py`.
 
 ---
 
+## 💾 Data Storage
+
+- The ATM system uses a file called `accounts.pkl` to store user balances and PINs persistently.
+- The file is read at the start and updated after every transaction.
+- If `accounts.pkl` does not exist, the system loads default users from `USERinfo.py` and creates the file automatically.
+
+---
 ## 🏁 How to Run
 
 1. Make sure you have Python installed (version 3.x).
